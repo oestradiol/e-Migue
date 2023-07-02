@@ -1,19 +1,20 @@
 import { FunctionComponent } from "react";
 import styles from './page.module.css';
+import Link from "next/link"
 
-const PaginaInicial: FunctionComponent = () => {
+export default function Home() {
   return (
     <div className={styles.elemento_pagina_inicial}>
       <div className={styles.div}>
         <div className={styles.botoes_login}>
           <div className={styles.anonimo}>
-            <a href ='app/PaginaAnonima.tsx' className={styles.login_button}>
+            <Link href ='/user' className={styles.login_button}>
             <img
                 className={styles.img}
                 alt="Sou estudante"
                 src="https://generation-sessions.s3.amazonaws.com/cc110aa53dfcee1c13265cea2eb53bbb/img/an-nimo.png"
                 />
-            </a>
+            </Link>
           </div>
           <a href="/rota-estudante" className={styles.login_button}>
             <img
@@ -59,4 +60,4 @@ const PaginaInicial: FunctionComponent = () => {
   );
 };
 
-export default PaginaInicial;
+

@@ -1,0 +1,388 @@
+.element {
+    background-color: #141414;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+   .div {
+    background-color: #141414;
+    border: 1px none;
+    height: 1080px;
+    position: relative;
+    width: 1920px;
+  }
+  
+   .perfil {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    left: 1717px;
+    position: absolute;
+    top: 46px;
+    width: fit-content;
+  }
+  
+.overlap_group_wrapper {
+    height: 41.29px;
+    min-width: 47px;
+    position: relative;
+  }
+  
+.overlap_group {
+    height: 41px;
+    position: relative;
+    width: 47px;
+  }
+  
+.rectangle {
+    background-color: #000000;
+    border-radius: 9.59px;
+    height: 40px;
+    left: 2px;
+    position: absolute;
+    top: 1px;
+    width: 42px;
+  }
+  
+  .icone_anonimo {
+    height: 40px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 47px;
+  }
+  
+  .text_wrapper {
+    color: #d0cece;
+    font-family: "Open Sans", Helvetica;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.45px;
+    line-height: normal;
+    opacity: 0.5;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .icon_editar_perfil {
+    height: 6.82px;
+    min-width: 14.41px;
+    position: relative;
+  }
+  
+  .botes {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    left: 764px;
+    padding: 0px 77px;
+    position: absolute;
+    top: 646px;
+    width: fit-content;
+  }
+  
+  .div_wrapper {
+    height: 57px;
+    margin-right: -2px;
+    min-width: 240px;
+    position: relative;
+  }
+  
+  .overlap_group_2 {
+    background-color: #000000;
+    border-radius: 12px;
+    height: 57px;
+    position: relative;
+    width: 238px;
+  }
+  
+  .text_wrapper_2 {
+    color: #d0cece;
+    font-family: "Open Sans", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 82px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 15px;
+  }
+  
+  .icon_disciplinas {
+    height: 27px;
+    left: 47px;
+    position: absolute;
+    top: 15px;
+    width: 25px;
+  }
+  
+  .text_wrapper_3 {
+    color: #d0cece;
+    font-family: "Open Sans", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 78px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 15px;
+  }
+  
+  .icon_professores {
+    height: 23px;
+    left: 23px;
+    position: absolute;
+    top: 18px;
+    width: 30px;
+  }
+  
+  .pesquisa {
+    height: 50px;
+    left: 741px;
+    position: absolute;
+    top: 563px;
+    width: 440px;
+  }
+  
+  .overlap {
+    background-color: #424242;
+    border-radius: 50px;
+    height: 50px;
+    position: relative;
+    width: 438px;
+  }
+  
+  .text_wrapper_4 {
+    color: #d0cece;
+    font-family: "Open Sans", Helvetica;
+    font-size: 15px;
+    font-weight: 600;
+    left: 88px;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.5;
+    position: absolute;
+    top: 15px;
+  }
+  
+  .icon_lupa {
+    height: 25px;
+    left: 37px;
+    position: absolute;
+    top: 13px;
+    width: 24px;
+  }
+  
+  .e_migu {
+    height: 292px;
+    left: 763px;
+    position: absolute;
+    top: 238px;
+    width: 396px;
+  }
+  
+  .overlap_2 {
+    height: 292px;
+    position: relative;
+    width: 394px;
+  }
+  
+  .h_1 {
+    color: #d0cece;
+    font-family: "Open Sans", Helvetica;
+    font-size: 98px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 159px;
+  }
+  
+  .logo_e_migu_branco {
+    height: 222px;
+    left: 86px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 222px;
+  }
+  
+  .barra_esquerda {
+    height: 1080px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 309px;
+  }
+  
+  .overlap_3 {
+    height: 1080px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 272px;
+  }
+  
+  .rectangle_2 {
+    background-color: #0c0c0c;
+    border-radius: 0px 30px 30px 0px;
+    height: 1080px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 270px;
+  }
+  
+  .sair {
+    height: 28px;
+    left: 80px;
+    position: absolute;
+    top: 994px;
+    width: 75px;
+  }
+  
+  .text_wrapper_5 {
+    color: #e86e6e;
+    font-family: "Open Sans", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 34px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 39px;
+  }
+  
+  .icon_sair {
+    height: 25px;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    width: 24px;
+  }
+  
+  .professores {
+    height: 28px;
+    left: 58px;
+    position: absolute;
+    top: 387px;
+    width: 155px;
+  }
+  
+  .text_wrapper_6 {
+    color: #d0cece;
+    font-family: "Open Sans", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 36px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 117px;
+  }
+  
+  .img {
+    height: 24px;
+    left: 0;
+    position: absolute;
+    top: 3px;
+    width: 30px;
+  }
+  
+  .disciplinas {
+    height: 29px;
+    left: 63px;
+    position: absolute;
+    top: 315px;
+    width: 145px;
+  }
+  
+  .text_wrapper_7 {
+    color: #d0cece;
+    font-family: "Open Sans", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 35px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 108px;
+  }
+  
+  .icon_disciplinas_2 {
+    height: 29px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 25px;
+  }
+  
+  .pgina_inicial {
+    height: 64px;
+    left: 0;
+    position: absolute;
+    top: 211px;
+    width: 272px;
+  }
+  
+  .overlap_group_3 {
+    background-color: #141414;
+    height: 64px;
+    position: relative;
+    width: 270px;
+  }
+  
+  .rectangle_3 {
+    background-color: #1984ff;
+    height: 64px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 6px;
+  }
+  
+  .text_wrapper_8 {
+    color: #1984ff;
+    font-family: "Open Sans", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 86px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 18px;
+    width: 133px;
+  }
+  
+  .home {
+    height: 28px;
+    left: 51px;
+    position: absolute;
+    top: 18px;
+    width: 25px;
+  }
+  
+  .logo_e_migu_branco-2 {
+    height: 93px;
+    left: 91px;
+    object-fit: cover;
+    position: absolute;
+    top: 59px;
+    width: 88px;
+  }
+  
+  .icon_voltar {
+    height: 23px;
+    left: 286px;
+    position: absolute;
+    top: 55px;
+    width: 23px;
+  }
+  
