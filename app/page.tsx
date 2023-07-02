@@ -1,95 +1,62 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import { FunctionComponent } from "react";
+import styles from './page.module.css';
 
-export default function Home() {
+const PaginaInicial: FunctionComponent = () => {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+    <div className={styles.elemento_pagina_inicial}>
+      <div className={styles.div}>
+        <div className={styles.botoes_login}>
+          <div className={styles.anonimo}>
+            <a href ='app/PaginaAnonima.tsx' className={styles.login_button}>
+            <img
+                className={styles.img}
+                alt="Sou estudante"
+                src="https://generation-sessions.s3.amazonaws.com/cc110aa53dfcee1c13265cea2eb53bbb/img/an-nimo.png"
+                />
+            </a>
+          </div>
+          <a href="/rota-estudante" className={styles.login_button}>
+            <img
+                  className={styles.sou_estudante}
+                  alt="Rectangle"
+                  src="https://generation-sessions.s3.amazonaws.com/b755119efba693a9a63adf890d2ebeee/img/sou-estudante@2x.png"
             />
           </a>
+          <a href="/rota-professor" className={styles.login_button}>
+            <div className={styles.sou_estudante}>
+              <div className={styles.overlap_group}>
+                <img
+                  className={styles.rectangle}
+                  alt="Rectangle"
+                  src="https://generation-sessions.s3.amazonaws.com/b755119efba693a9a63adf890d2ebeee/img/rectangle-5-1.svg"
+                />
+                <img
+                  className={styles.sou_professor}
+                  alt="Sou professor"
+                  src="https://generation-sessions.s3.amazonaws.com/b755119efba693a9a63adf890d2ebeee/img/sou-professor.svg"
+                />
+                <img
+                  className={styles.icon_professor}
+                  alt="Ícone professor"
+                  src="https://generation-sessions.s3.amazonaws.com/b755119efba693a9a63adf890d2ebeee/img/icon-professor@2x.png"
+                />
+              </div>
+            </div>
+          </a>
+        </div>
+        <div className={styles.e_migue}>
+          <div className={styles.overlap}>
+            <h1 className={styles.text_wrapper}>e-migué</h1>
+            <img
+              className={styles.logo_e_migue_branco}
+              alt="Logo e miguê branco"
+              src="https://generation-sessions.s3.amazonaws.com/b755119efba693a9a63adf890d2ebeee/img/logo-e-migu--branco@2x.png"
+            />
+          </div>
         </div>
       </div>
+    </div>
+  );
+};
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
-}
+export default PaginaInicial;
