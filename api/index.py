@@ -1,27 +1,64 @@
-from fastapi import Request
-from pysrc.__main__ import app
-
-@app.get("/api/teste/{full_path:path}")
-async def get_all_urls_from_request(request: Request, full_path: str):
-    url_list_from_request = [
-        {"path": route.path, "name": route.name} for route in request.app.routes
-    ]
-    url_list = [{"path": route.path, "name": route.name} for route in app.routes]
-    return f"""full path: /{full_path}.
-              raw_url: {request.url._url}.
-              url_list_from_request: {url_list_from_request}.
-              url_list: {url_list}"""
-
-@app.get("/api/hello")
-async def say_hello():
-    return {"message": "Hello from Index Controller!"}
+from fastapi import FastAPI, Depends, HTTPException
+from contextlib import asynccontextmanager
+from typing import Annotated
+import psycopg
+from pysrc import models
+from pysrc.connection import config_db, get_db
 
 
-@app.get("/api/hello/{name}")
-async def say_hello(name: str):
-    return {"message": f"Hello from Index Controller, {name}!"}
+Connection = Annotated[psycopg.AsyncConnection, Depends(get_db)]
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    await config_db()
+    yield
 
 
-@app.post("/api/hello")
-async def say_hello(model):
-    return {"message": f"Hello from Index Controller, {model.message}!"}
+app = FastAPI(lifespan=lifespan)
+
+
+@app.get("/api/professores")
+async def get_professores(
+        conn: Connection
+) -> list[models.ProfessorItem]:
+    return await models.get_all_professores(conn)
+
+@app.get("/api/disciplinas")
+async def get_disciplinas(
+        conn: Connection
+) -> list[models.DisciplinaItem]:
+    return await models.get_all_disciplinas(conn)
+
+@app.get("/api/disciplina/{disciplina_id}")
+async def get_disciplina(
+        conn: Connection,
+        disciplina_id: int
+) -> models.DisciplinaInfo:
+    return await models.get_disciplina_info(conn, disciplina_id)
+
+@app.get("/api/professor/{professor_id}")
+async def get_professor(
+        conn: Connection,
+        professor_id: int
+        ) -> models.ProfessorInfo:
+    return await models.get_professor_info(conn, professor_id)
+
+@app.get("/api/turma/{turma_id}")
+async def get_turma(
+        conn: Connection,
+        turma_id: int
+        ) -> models.TurmaInfo:
+    turma = await models.get_turma_info(conn, turma_id)
+
+    if turma is None:
+        raise HTTPException(status_code=404, detail="Turma not found")
+    return turma
+
+@app.post("/api/turma/{turma_id}/avaliacao")
+async def add_avaliacao(
+        conn: Connection,
+        turma_id: int,
+        avaliacao: models.AvaliacaoIn
+        ) -> models.Avaliacao:
+    new_avaliacao = await models.add_avaliacao_to_turma(conn, turma_id, avaliacao)
+    return new_avaliacao
