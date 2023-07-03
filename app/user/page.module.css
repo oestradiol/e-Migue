@@ -1,17 +1,15 @@
 .element {
-    background-color: #141414;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
+    height: 100vh;
+    background-color: #141414;
   }
   
    .div {
-    background-color: #141414;
-    border: 1px none;
-    height: 1080px;
-    position: relative;
-    width: 1920px;
+    margin: auto 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
   }
   
    .perfil {
@@ -45,17 +43,7 @@
     width: 47px;
   }
   
-  .text_wrapper {
-    color: #d0cece;
-    font-family: "Open Sans", Helvetica;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: -0.45px;
-    line-height: normal;
-    opacity: 0.5;
-    position: relative;
-    width: fit-content;
-  }
+
   
   .icon_editar_perfil {
     height: 6.82px;
@@ -103,11 +91,11 @@
   }
   
   .icon_disciplinas {
-    height: 27px;
-    left: 47px;
-    position: absolute;
-    top: 15px;
-    width: 25px;
+    
+    left: 63px;
+    position: relative;
+    top: 310px;
+    
   }
   
   .text_wrapper_3 {
@@ -122,12 +110,11 @@
     top: 15px;
   }
   
-  .icon_professores {
-    height: 23px;
-    left: 23px;
-    position: absolute;
-    top: 18px;
-    width: 30px;
+  .icon_professor {
+    left: 58px;
+    position: relative;
+    top:420px;
+    
   }
   
   .pesquisa {
@@ -138,12 +125,28 @@
     width: 440px;
   }
   
+
+
+
   .overlap {
     background-color: #424242;
     border-radius: 50px;
-    height: 50px;
-    position: relative;
-    width: 438px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    
+    left: 50%; /* Posição horizontal inicial */
+    transform: translateX(-50%);
+    width: 400px; /* Largura inicial */
+    max-width: 50%; /* Largura máxima em dispositivos menores */
+    transition: width 0.3s ease;
+  }
+
+  @media (max-width: 600px) {
+    .overlap {
+      width: 50%; /* Largura ajustada em dispositivos menores */
+      max-width: 100%; /* Largura máxima em dispositivos menores */
+    }
   }
   
   .text_wrapper_4 {
@@ -203,10 +206,12 @@
   }
   
   .barra_esquerda {
-    z-index: 1;
     left: 0;
     position: absolute;
     top: 0;
+    width: 309px;
+    
+    height: 100vh;
   }
   
   .overlap_3 {
@@ -220,7 +225,7 @@
   .rectangle_2 {
     background-color: #0c0c0c;
     border-radius: 0px 30px 30px 0px;
-    height: 1080px;
+    height: 100vh;;
     left: 0;
     position: absolute;
     top: 0;
@@ -228,11 +233,11 @@
   }
   
   .sair {
-    height: 28px;
+    
     left: 80px;
     position: absolute;
-    top: 994px;
-    width: 75px;
+    top: 900px;
+   
   }
   
   .text_wrapper_5 {
@@ -311,15 +316,15 @@
     left: 0;
     position: absolute;
     top: 0;
-    width: 25px;
+    
   }
   
   .pgina_inicial {
-    height: 64px;
-    left: 0;
-    position: absolute;
-    top: 211px;
-    width: 272px;
+    
+    left: 63px;
+    position: relative;
+    top: 200px;
+    
   }
   
   .overlap_group_3 {
@@ -352,20 +357,11 @@
   }
   
   .home {
-    height: 28px;
-    left: 51px;
-    position: absolute;
-    top: 18px;
-    width: 25px;
+    
   }
   
-  .logo_e_migu_branco-2 {
-    height: 93px;
-    left: 91px;
-    object-fit: cover;
-    position: absolute;
-    top: 59px;
-    width: 88px;
+  .logo_{
+    
   }
   
   .icon_voltar {
@@ -384,6 +380,41 @@
     background: #424242;
     position: relative;
     padding-left: 6rem; 
+    
   }
 
-  
+  /* Add hover animation to the login buttons */
+.botoes_login a:hover img{
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+
+.e_migue {
+  width: 22.5%;
+  min-width: 135px;
+  max-width: 157px;
+  padding-left: 17px;
+  margin: 0 auto;
+}
+
+.text_wrapper {
+  color: #d0cece;
+  font-family: "Open Sans", Helvetica;
+  font-size: 102px;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center; /* Center text */
+}
+@media (max-width: 700px) {
+  .text_wrapper {
+    font-size: 82px;
+  }
+}
+@media (max-width: 400px) {
+  .text_wrapper {
+    font-size: 62px;
+  }
+}

@@ -19,6 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>{children}</body>
       <div className={styles.barra_esquerda}>
+          
             <div className={styles.rectangle_2} />
 
             <div>

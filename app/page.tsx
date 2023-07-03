@@ -18,7 +18,7 @@ export default function Home() {
             </Link>
           </div>
           <div className={styles.estudante}>
-            <Link href ='/rota-estudante' className={styles.login_button}>
+            <Link href ='/user' className={styles.login_button}>
             <img
                   className={styles.img}
                   alt="Entrar como Estudante"
@@ -27,7 +27,7 @@ export default function Home() {
             </Link>
           </div>
           <div className={styles.professor}>
-            <Link href ='/rota-professor' className={styles.login_button}>
+            <Link href ='/user-professor' className={styles.login_button}>
             <img
                   className={styles.img}
                   alt="Entrar como Professor"
@@ -40,5 +40,4 @@ export default function Home() {
     </div>
   );
 };
-
 

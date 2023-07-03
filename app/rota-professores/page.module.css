@@ -1,0 +1,151 @@
+.element {
+    display: flex;
+    height: 100vh;
+    background-color: #141414;
+  }
+  
+   .div {
+    margin: auto 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .barra_esquerda {
+    
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 309px;
+    
+    height: 100vh;;
+  }
+
+  .rectangle_2 {
+    background-color: #0c0c0c;
+    border-radius: 0px 30px 30px 0px;
+    height: 100vh;;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 270px;
+  }
+
+  .icon_professor {
+    left: 58px;
+    position: relative;
+    top:420px;
+    
+  }
+
+  .icon_disciplinas {
+    
+    left: 63px;
+    position: relative;
+    top: 310px;
+    
+  }
+
+  .pgina_inicial {
+    
+    left: 63px;
+    position: relative;
+    top: 200px;
+    
+  }
+
+  .icon_voltar {
+    height: 23px;
+    left: 286px;
+    position: absolute;
+    top: 55px;
+    width: 23px;
+  }
+
+
+  .sair {
+    
+    left: 80px;
+    position: absolute;
+    top: 900px;
+   
+  }
+
+  .rectangle_4 {
+    width: 27.375rem;
+    height: 3.125rem;
+    flex-shrink: 0;
+    border-radius: 3.125rem;
+    background: #424242;
+    position: relative;
+    padding-left: 6rem; 
+    
+  }
+
+  .icon_lupa {
+    height: 25px;
+    left: 37px;
+    position: absolute;
+    top: 13px;
+    width: 24px;
+  }
+
+  
+  .overlap {
+    background-color: #424242;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 30px; /* Posição vertical inicial */
+    left: 80%; /* Posição horizontal inicial */
+    transform: translateX(-50%);
+    width: 400px; /* Largura inicial */
+    max-width: 50%; /* Largura máxima em dispositivos menores */
+    transition: width 0.3s ease;
+  }
+
+  @media (max-width: 600px) {
+    .overlap {
+      width: 50%; /* Largura ajustada em dispositivos menores */
+      max-width: 100%; /* Largura máxima em dispositivos menores */
+    }
+  }
+
+  .a {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .buttonsid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    margin: 10px;
+  }
+  
+  .buttonsid:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  @media (max-width: 600px) {
+    .a {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  
+    .buttonsid {
+      font-size: 16px;
+      padding: 8px 16px;
+      margin: 5px;
+    }
+  }
