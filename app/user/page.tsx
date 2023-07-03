@@ -1,4 +1,5 @@
 
+import { relative } from 'path';
 import styles from './page.module.css';
 
 export default function Selection_page()  {
@@ -9,7 +10,7 @@ export default function Selection_page()  {
         <div className={styles.perfil}>
           <div className={styles.overlap_group_wrapper}>
             <div className={styles.overlap_group}>
-              <div className={styles.rectangle} />
+              
               <img
                 className={styles.icone_anonimo}
                 alt="Icon annimo"
@@ -48,12 +49,16 @@ export default function Selection_page()  {
         </div>
         <div className={styles.pesquisa}>
           <div className={styles.overlap}>
-            <div className={styles.text_wrapper_4}>Pesquisar disciplinas ou professores</div>
-            <img
+          
+            <input type="text" className= {styles.rectangle_4} placeholder="Pesquisar disciplinas ou professores"  name = "Resultado_pesquisa"/>
+           <img
               className={styles.icon_lupa}
               alt="Icon lupa"
               src="https://generation-sessions.s3.amazonaws.com/947dd278e122fe6a115d674876e525b1/img/icon-lupa.svg"
-            />
+          /> 
+
+
+          
           </div>
         </div>
         <div className={styles.e_migu}>
@@ -66,9 +71,9 @@ export default function Selection_page()  {
             />
           </div>
         </div>
-
-
         
+
+
         
       </div>
     </div>

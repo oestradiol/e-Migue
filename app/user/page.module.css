@@ -36,15 +36,6 @@
     width: 47px;
   }
   
-.rectangle {
-    background-color: #000000;
-    border-radius: 9.59px;
-    height: 40px;
-    left: 2px;
-    position: absolute;
-    top: 1px;
-    width: 42px;
-  }
   
   .icone_anonimo {
     height: 40px;
@@ -385,4 +376,15 @@
     top: 55px;
     width: 23px;
   }
+  
+  .rectangle_4 {
+    width: 27.375rem;
+    height: 3.125rem;
+    flex-shrink: 0;
+    border-radius: 3.125rem;
+    background: #424242;
+    position: relative;
+    padding-left: 6rem; 
+  }
+
   
