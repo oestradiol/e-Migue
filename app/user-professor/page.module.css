@@ -1,0 +1,249 @@
+.element_sou_professor {
+  background-color: #141414;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.element_sou_professor .div {
+  background-color: #141414;
+  border: 1px none;
+  height: 1080px;
+  position: relative;
+  width: 1920px;
+}
+
+.perfil {
+  align-items: center;
+  display: flex;
+  gap: 9px;
+  left: 1686px;
+  position: absolute;
+  top: 52px;
+  width: fit-content;
+}
+
+.botes_sou_professor {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  left: 841px;
+  position: absolute;
+  top: 402px;
+  width: fit-content;
+}
+
+/*.botoes_sou_professor {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}*/
+
+.botoes_sou_professor a:hover img{
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sou_professor_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlap_group_wrapper {
+  height: 40.29px;
+  min-width: 47px;
+  position: relative;
+}
+
+.overlap_group {
+  height: 40px;
+  position: relative;
+  width: 47px;
+}
+
+.rectangle {
+  background-color: #1984ff;
+  border-radius: 9.59px;
+  height: 40px;
+  left: 2px;
+  position: absolute;
+  top: 0;
+  width: 42px;
+}
+
+.icon_professor {
+  height: 40px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 47px;
+}
+
+.text_wrapper {
+  color: #d0cece;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.45px;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.icon_editar_perfil {
+  height: 6.47px;
+  min-width: 10.81px;
+  position: relative;
+}
+
+
+.nota_geral {
+  height: 19px;
+  min-width: 199.75px;
+  position: relative;
+}
+
+.text_wrapper_2 {
+  color: #ffffff;
+  font-family: "Lato-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0.16px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+}
+
+.estrelas {
+  height: 18px;
+  left: 110px;
+  position: absolute;
+  top: 0;
+  width: 88px;
+}
+
+.icon_estrela {
+  height: 18px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 18px;
+}
+
+.icon_estrela_1 {
+  height: 18px;
+  left: 18px;
+  position: absolute;
+  top: 0;
+  width: 18px;
+}
+
+.icon_estrela_2 {
+  height: 18px;
+  left: 35px;
+  position: absolute;
+  top: 0;
+  width: 18px;
+}
+
+.icon_estrela_3 {
+  height: 18px;
+  left: 53px;
+  position: absolute;
+  top: 0;
+  width: 18px;
+}
+
+.icon_estrela_4 {
+  height: 18px;
+  left: 70px;
+  position: absolute;
+  top: 0;
+  width: 18px;
+}
+
+.div_wrapper {
+  height: 57px;
+  margin-right: -2px;
+  min-width: 240px;
+  position: relative;
+}
+
+.overlap_group_2 {
+  background-color: #0077ff;
+  border-radius: 12px;
+  height: 57px;
+  position: relative;
+  width: 238px;
+}
+
+.icon_aluno_azul {
+  height: 40px;
+  left: 24px;
+  position: absolute;
+  top: 8px;
+  width: 40px;
+}
+
+.text_wrapper_3 {
+  color: #d0cece;
+  font-family: "Open Sans-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 7px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 15px;
+}
+
+.text_wrapper_4 {
+  color: #d0cece;
+  font-family: "Open Sans-Bold", Helvetica;
+  font-size: 18px;
+  font-weight: 700;
+  left: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 17px;
+}
+
+.text_wrapper_5 {
+  color: #d0cece;
+  font-family: "Open Sans-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 15px;
+}
+
+.text_wrapper_6 {
+  color: #ffffff;
+  font-family: "Lato-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.16px;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.icon_voltar {
+  height: 23px;
+  left: 71px;
+  position: absolute;
+  top: 55px;
+  width: 23px;
+}
