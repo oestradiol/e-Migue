@@ -1,0 +1,29 @@
+/* .logo {
+} */
+
+.e_migue {
+  width: 22.5%;
+  min-width: 135px;
+  max-width: 157px;
+  padding-left: 17px;
+  margin: 0 auto;
+}
+
+.text_wrapper {
+  color: #d0cece;
+  font-family: "Open Sans", Helvetica;
+  font-size: 102px;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center; /* Center text */
+}
+@media (max-width: 700px) {
+  .text_wrapper {
+    font-size: 82px;
+  }
+}
+@media (max-width: 400px) {
+  .text_wrapper {
+    font-size: 62px;
+  }
+}

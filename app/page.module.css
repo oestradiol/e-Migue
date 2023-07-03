@@ -1,31 +1,37 @@
 .elemento_pagina_inicial {
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   background-color: #141414;
-  max-width: 1920px;
-  position: relative;
 }
 
 .elemento_pagina_inicial .div {
-  background-color: #141414;
-  border: 1px none;
-  height: 1080px;
-  position: relative;
-  width: 100%; /* Changed to relative width */
-  max-width: 1920px;
-}
-
-.botoes_login {
-  align-items: center;
+  margin: auto 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 25px;
-  padding: 4px 0px;
-  position: absolute;
-  top: calc(50% - 50px); /* Center vertically */
-  left: calc(50% - 119px); /* Center horizontally */
+}
+
+.botoes_login {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Add hover animation to the login buttons */
+.botoes_login a:hover img{
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.login_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_button .img {
+  max-width: 238px;
 }
 
 .sou_estudante {
@@ -63,59 +69,4 @@
   position: absolute;
   top: 4px;
   width: 48px;
-}
-
-.e_migue {
-  height: 302px;
-  margin-top: 50px; /* Added margin to create space below */
-  width: 100%; /* Changed to relative width */
-  max-width: 396px;
-  margin-left: auto; /* Center horizontally */
-  margin-right: auto; /* Center horizontally */
-}
-
-.overlap {
-  height: 302px;
-  position: relative;
-  width: 100%; /* Changed to relative width */
-  max-width: 394px;
-}
-
-.text_wrapper {
-  color: #d0cece;
-  font-family: "Open Sans", Helvetica;
-  font-size: 102px;
-  font-weight: 700;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: calc(50% + 150px); /* Center vertically */
-  width: 100%; /* Added width */
-  text-align: center; /* Center text */
-}
-
-.logo_e_migue_branco {
-  height: 222px;
-  left: 86px;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 222px;
-  margin-left: auto; /* Center horizontally */
-  margin-right: auto; /* Center horizontally */
-  top: calc(50% - 30px); /* Center vertically */
-  left: calc(50% - 90px); /* Center horizontally */
-}
-
-/* Add hover animation to the login buttons */
-.botoes_login a:hover img{
-  transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
-}
-
-.login_button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

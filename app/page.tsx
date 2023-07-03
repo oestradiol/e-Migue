@@ -1,57 +1,39 @@
-import { FunctionComponent } from "react";
 import styles from './page.module.css';
+import Link from "next/link"
+import Logo from "./components/logo"
 
-const PaginaInicial: FunctionComponent = () => {
+export default function Home() {
   return (
     <div className={styles.elemento_pagina_inicial}>
       <div className={styles.div}>
+        <Logo></Logo>
         <div className={styles.botoes_login}>
           <div className={styles.anonimo}>
-            <a href ='app/PaginaAnonima.tsx' className={styles.login_button}>
+            <Link href ='/user' className={styles.login_button}>
             <img
                 className={styles.img}
-                alt="Sou estudante"
-                src="https://generation-sessions.s3.amazonaws.com/cc110aa53dfcee1c13265cea2eb53bbb/img/an-nimo.png"
+                alt="Entrar como Anônimo"
+                src="/botao_anonimo.png"
                 />
-            </a>
+            </Link>
           </div>
-          <a href="/rota-estudante" className={styles.login_button}>
+          <div className={styles.estudante}>
+            <Link href ='/rota-estudante' className={styles.login_button}>
             <img
-                  className={styles.sou_estudante}
-                  alt="Rectangle"
-                  src="https://generation-sessions.s3.amazonaws.com/b755119efba693a9a63adf890d2ebeee/img/sou-estudante@2x.png"
+                  className={styles.img}
+                  alt="Entrar como Estudante"
+                  src="/botao_estudante.png"
             />
-          </a>
-          <a href="/rota-professor" className={styles.login_button}>
-            <div className={styles.sou_estudante}>
-              <div className={styles.overlap_group}>
-                <img
-                  className={styles.rectangle}
-                  alt="Rectangle"
-                  src="https://generation-sessions.s3.amazonaws.com/b755119efba693a9a63adf890d2ebeee/img/rectangle-5-1.svg"
-                />
-                <img
-                  className={styles.sou_professor}
-                  alt="Sou professor"
-                  src="https://generation-sessions.s3.amazonaws.com/b755119efba693a9a63adf890d2ebeee/img/sou-professor.svg"
-                />
-                <img
-                  className={styles.icon_professor}
-                  alt="Ícone professor"
-                  src="https://generation-sessions.s3.amazonaws.com/b755119efba693a9a63adf890d2ebeee/img/icon-professor@2x.png"
-                />
-              </div>
-            </div>
-          </a>
-        </div>
-        <div className={styles.e_migue}>
-          <div className={styles.overlap}>
-            <h1 className={styles.text_wrapper}>e-migué</h1>
+            </Link>
+          </div>
+          <div className={styles.professor}>
+            <Link href ='/rota-professor' className={styles.login_button}>
             <img
-              className={styles.logo_e_migue_branco}
-              alt="Logo e miguê branco"
-              src="https://generation-sessions.s3.amazonaws.com/b755119efba693a9a63adf890d2ebeee/img/logo-e-migu--branco@2x.png"
+                  className={styles.img}
+                  alt="Entrar como Professor"
+                  src="/botao_professor.png"
             />
+            </Link>
           </div>
         </div>
       </div>
@@ -59,4 +41,4 @@ const PaginaInicial: FunctionComponent = () => {
   );
 };
 
-export default PaginaInicial;
+
