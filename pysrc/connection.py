@@ -9,18 +9,34 @@ class Database:
     password: str
     user: str
 
-    @staticmethod
-    def config_db():
-        pass
-
 async def get_db():
+    host = os.getenv("POSTGRES_HOST")
+    if host is None:
+        host = "172.17.0.2"
+
+    db_name = os.getenv("POSTGRES_DATABASE")
+    if db_name is None:
+        db_name = "emigue"
+
+    user = os.getenv("POSTGRES_USER")
+    if user is None:
+        user = "postgres"
+
+    port = os.getenv("POSTGRES_5432")
+    if port is None:
+        port = "5432"
+
+    password = os.getenv("POSTGRES_PASSWORD")
+    if password is None:
+        password = "1234"
+
     async with await psycopg.AsyncConnection.connect(
             f"""
-            host={Database.host}
-            port={Database.port}
-            dbname={Database.db_name}
-            password={Database.password}
-            user={Database.user}
+            host={host}
+            port={port}
+            dbname={db_name}
+            password={password}
+            user={user}
             """
     ) as aconn:
         yield aconn
@@ -28,7 +44,6 @@ async def get_db():
     return
 
 async def config_db():
-    dotenv.load_dotenv("./dev.env")
     host = os.getenv("POSTGRES_HOST")
     if host is None:
         host = "172.17.0.2"
