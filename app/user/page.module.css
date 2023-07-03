@@ -203,11 +203,10 @@
   }
   
   .barra_esquerda {
-    height: 1080px;
+    z-index: 1;
     left: 0;
     position: absolute;
     top: 0;
-    width: 309px;
   }
   
   .overlap_3 {

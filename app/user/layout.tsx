@@ -15,8 +15,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
-      <div className={styles.barra_esquerda}>
+      <body className={inter.className}>
+        <div className={styles.barra_esquerda}>
           <div className={styles.overlap_3}>
             <div className={styles.rectangle_2} />
             <div className={styles.sair}>
@@ -66,7 +66,8 @@ export default function RootLayout({
             src="https://generation-sessions.s3.amazonaws.com/947dd278e122fe6a115d674876e525b1/img/icon-voltar.svg"
           />
         </div>
-      
+        {children}
+      </body>
     </html>
   )
 }
