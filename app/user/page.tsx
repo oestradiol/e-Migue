@@ -25,7 +25,7 @@ export default function Selection_page()  {
           <h1 className={styles.text_wrapper}>e-migué</h1>
         </div>  
           
-        
+        <div>
         <div className={styles.overlap}>
           
           <input type="text" className= {styles.rectangle_4} placeholder="Pesquisar disciplinas ou professores"  name = "Resultado_pesquisa"/>
@@ -55,7 +55,7 @@ export default function Selection_page()  {
             
           </div>
 
-        
+        </div>
       </div>
     </div>
   );

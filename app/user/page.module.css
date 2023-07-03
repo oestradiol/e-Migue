@@ -125,15 +125,28 @@
     width: 440px;
   }
   
+
+
+
   .overlap {
     background-color: #424242;
     border-radius: 50px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    position: relative;
-    width: 438px;
-    left: 741px;
+    position: absolute;
+    
+    left: 50%; /* Posição horizontal inicial */
+    transform: translateX(-50%);
+    width: 400px; /* Largura inicial */
+    max-width: 50%; /* Largura máxima em dispositivos menores */
+    transition: width 0.3s ease;
+  }
+
+  @media (max-width: 600px) {
+    .overlap {
+      width: 50%; /* Largura ajustada em dispositivos menores */
+      max-width: 100%; /* Largura máxima em dispositivos menores */
+    }
   }
   
   .text_wrapper_4 {
