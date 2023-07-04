@@ -1,6 +1,12 @@
 import { relative } from 'path';
 import styles from './page.module.css';
 import Link from "next/link"
+import React from 'react';
+import { getAllDisciplinas } from './services/get-all-disciplinas';
+
+interface MyComponentProps {
+  disciplinas: any[];
+}
 
 
 function selectButton(selectedButton: 'disciplina' | 'professores') {
@@ -17,19 +23,13 @@ function selectButton(selectedButton: 'disciplina' | 'professores') {
 }
 
 
-const disciplinas = [
-  { id: 1, name: 'Disciplina 1' },
-  { id: 2, name: 'Disciplina 2' },
-  { id: 3, name: 'Disciplina 3' },
-];
-
-const DisciplinaList = ({ disciplinas }) => {
+const DisciplinaList: React.FC<MyComponentProps> = ({ disciplinas }) => {
   return (
     <div>
       {disciplinas.map((disciplina) => (
         <div className={styles.disciplina_card} key={disciplina.id}>
           <div className={styles.disciplina_info}>
-            <h3>{disciplina.name}</h3>
+            <h3>{disciplina.nome}</h3>
           </div>
         </div>
       ))}
@@ -37,7 +37,8 @@ const DisciplinaList = ({ disciplinas }) => {
   );
 };
 
-export default function Disciplinas() {
+export default async function Disciplinas() {
+    const disciplinas = await getAllDisciplinas()
   return (
     <div className={styles.element}>
       <div className={styles.div}>
