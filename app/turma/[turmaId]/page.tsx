@@ -1,11 +1,10 @@
 import { getTurmaById } from "../services/get-turma-by-id";
 import styles from './page.module.css';
-import Link from "next/link"
 
 export default async function TurmaPage({
     params,
 }: {
-    params: { turmaId: Number };
+    params: { turmaId: any };
 }) {
     const turma: any = await getTurmaById(params.turmaId);
     const avaliacoes = turma.avaliacoes;
@@ -40,7 +39,7 @@ export default async function TurmaPage({
     );
 }
 
-const renderStars = (rating) => {
+const renderStars = (rating: any) => {
     const filledStars = '★'.repeat(rating);
     const emptyStars = '☆'.repeat(5 - rating);
     return (

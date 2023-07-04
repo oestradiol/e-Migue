@@ -4,7 +4,7 @@ import Link from "next/link"
 export  default async function ProfessorPage({
     params,
 }: {
-    params:{professorId: number};
+    params:{professorId: any};
 }) {
     const professor: any = await getProfessorById(params.professorId);
     return<>
@@ -17,7 +17,7 @@ export  default async function ProfessorPage({
                     <ul>
                         {professor.turmas.map((turma: any) => (
                             <li key={turma[0]} className={styles.avaliacaoItem}>
-                            <Link href={`/turma/${professor.id}`}>  
+                            <Link href={`/turma/${turma[0]}`}>  
                             <div className={styles.teacher_info}>
                                 <h2> {turma[1]} </h2>
                             </div>

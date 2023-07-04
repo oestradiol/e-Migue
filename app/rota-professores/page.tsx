@@ -71,7 +71,7 @@ const TeacherList: React.FC<MyComponentProps> = ({ teachers }) => {
   );
 };
 
-const renderStars = (rating) => {
+const renderStars = (rating: any) => {
   const filledStars = '★'.repeat(rating);
   const emptyStars = '☆'.repeat(5 - rating);
   return (

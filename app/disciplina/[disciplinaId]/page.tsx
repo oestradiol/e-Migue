@@ -4,7 +4,7 @@ import Link from "next/link"
 export default async function DisciplinaPage({
     params,
 }: {
-    params: { disciplinaId: Number };
+    params: { disciplinaId: any };
 }) {
     const disciplina: any = await getDisciplinaById(params.disciplinaId);
     console.log(disciplina);
@@ -40,7 +40,7 @@ export default async function DisciplinaPage({
 }
 
 
-const renderStars = (rating) => {
+const renderStars = (rating: any) => {
     const filledStars = '★'.repeat(rating);
     const emptyStars = '☆'.repeat(5 - rating);
     return (
