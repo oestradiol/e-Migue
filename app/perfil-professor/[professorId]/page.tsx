@@ -10,9 +10,9 @@ export  default async function ProfessorPage({
         <h2>{professor.nome}</h2>
         <ul>
             {professor.turmas.map((turma: any) => (
-                <li key={turma.id}>
+                <li key={turma[0]}>
                 <div>
-                <h2> Nome: {turma.nome} </h2>
+                <h2> Nome: {turma[1]} </h2>
                 </div>
                 </li>
             ))}

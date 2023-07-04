@@ -103,14 +103,14 @@ async def get_disciplina_info(conn: psycopg.AsyncConnection, disciplina_id: int)
 
     async with conn.cursor() as curr:
         await curr.execute(
-                """SELECT professor_id, professor_nome, qtd_avaliacoes, sum_avaliacoes, disciplina_nome
+                """SELECT turma_id, professor_nome, qtd_avaliacoes, sum_avaliacoes, disciplina_nome
                 FROM Turmas_Avaliacoes_View
                 WHERE disciplina_id=%s""", (disciplina_id,)
         )
         nome_disciplina = ""
-        for p_id, p_nome, qtd_a, sum_a, d_nome in await curr.fetchall():
+        for t_id, p_nome, qtd_a, sum_a, d_nome in await curr.fetchall():
             nome_disciplina = d_nome
-            add_professor(p_id, p_nome, qtd_a, sum_a)
+            add_professor(t_id, p_nome, qtd_a, sum_a)
 
         return DisciplinaInfo(id=disciplina_id, nome=nome_disciplina, professores=list(professores.values()))
 
