@@ -149,3 +149,48 @@
       margin: 5px;
     }
   }
+
+  .lista_disciplinas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    left: 100%;
+  }
+
+  .disciplina_card {
+    color: white; /* Altera a cor do texto para branco */
+    background-color: black; /* Altera o plano de fundo para preto */
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+  }
+
+  .disciplina_info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-left: auto; /* Alinha à direita */
+  }
+  
+  .disciplina_info h3 {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .disciplina_rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .disciplina_rating div {
+    color: #FFD700;
+    font-size: 24px; /* Tamanho aumentado */
+    margin-right: 5px;
+  }
+  
+  .teacher_rating div:last-child {
+    color: #CCCCCC;
+  }
+  

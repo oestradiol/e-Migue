@@ -1,8 +1,6 @@
-
 import { relative } from 'path';
 import styles from './page.module.css';
 import Link from "next/link"
-
 
 function selectButton(selectedButton: 'disciplina' | 'professores') {
   const disciplinaButton = document.getElementById("disciplinaButton");
@@ -17,33 +15,65 @@ function selectButton(selectedButton: 'disciplina' | 'professores') {
   }
 }
 
+const teachers = [
+  { id: 1, name: 'Professor 1', subject: 'Matemática', rating: 4 },
+  { id: 2, name: 'Professor 2', subject: 'História', rating: 5 },
+  { id: 3, name: 'Professor 3', subject: 'Ciências', rating: 3 },
+];
 
-export default function Disciplinas()  {
+export default function Disciplinas() {
   return (
-    
     <div className={styles.element}>
-      <div className={styles.div}>  
-
-      
+      <div className={styles.div}>
       <div className = {styles.a}>   
       <Link href="/rota-disciplinas" className={styles.buttonsid} id="Disciplina">Disciplina</Link>
       <Link href="/rota-professores" className={styles.buttonsid}  id="Professores">Professores</Link>
       </div>  
 
-
-      <div className={styles.overlap}>
-      
-          <input type="text" className= {styles.rectangle_4} placeholder="Pesquisar disciplinas ou professores"  name = "Resultado_pesquisa"/>
+        <div className={styles.overlap}>
+          <input type="text" className={styles.rectangle_4} placeholder="Pesquisar disciplinas ou professores" name="Resultado_pesquisa" />
           <img
             className={styles.icon_lupa}
             alt="Icon lupa"
             src="/icon_lupa.png"
-            /> 
+          />
+          
+          
+
         </div>
+          <div className={styles.lista_professores}>    
+              <TeacherList teachers={teachers} />
+          </div>
         
       </div>
     </div>
   );
+}
+
+const TeacherList = ({ teachers }) => {
+  return (
+    <div>
+      {teachers.map((teacher) => (
+        <div className={styles.teacher_card} key={teacher.id}>
+          <div className={styles.teacher_info}>
+            <h3>{teacher.name}</h3>
+          </div>
+          <div className={styles.teacher_rating}>
+            {renderStars(teacher.rating)}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 };
 
-
+const renderStars = (rating) => {
+  const filledStars = '★'.repeat(rating);
+  const emptyStars = '☆'.repeat(5 - rating);
+  return (
+    <div>
+      {filledStars}
+      {emptyStars}
+    </div>
+  );
+};
