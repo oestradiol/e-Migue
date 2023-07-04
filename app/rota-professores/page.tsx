@@ -1,6 +1,12 @@
 import { relative } from 'path';
 import styles from './page.module.css';
 import Link from "next/link"
+import { getAllProfessores } from './services/get-all-professores';
+import React from 'react';
+
+interface MyComponentProps {
+  teachers: any[];
+}
 
 function selectButton(selectedButton: 'disciplina' | 'professores') {
   const disciplinaButton = document.getElementById("disciplinaButton");
@@ -15,13 +21,8 @@ function selectButton(selectedButton: 'disciplina' | 'professores') {
   }
 }
 
-const teachers = [
-  { id: 1, name: 'Professor 1', subject: 'Matemática', rating: 4 },
-  { id: 2, name: 'Professor 2', subject: 'História', rating: 5 },
-  { id: 3, name: 'Professor 3', subject: 'Ciências', rating: 3 },
-];
-
-export default function Disciplinas() {
+export default async function Professores() {
+    const teachers = await getAllProfessores()
   return (
     <div className={styles.element}>
       <div className={styles.div}>
@@ -50,16 +51,16 @@ export default function Disciplinas() {
   );
 }
 
-const TeacherList = ({ teachers }) => {
+const TeacherList: React.FC<MyComponentProps> = ({ teachers }) => {
   return (
     <div>
-      {teachers.map((teacher) => (
+      {teachers.map((teacher: any) => (
         <div className={styles.teacher_card} key={teacher.id}>
           <div className={styles.teacher_info}>
-            <h3>{teacher.name}</h3>
+            <h3>{teacher.nome}</h3>
           </div>
           <div className={styles.teacher_rating}>
-            {renderStars(teacher.rating)}
+            {renderStars(teacher.sum_avaliacoes/teacher.qtd_avaliacoes)}
           </div>
         </div>
       ))}
