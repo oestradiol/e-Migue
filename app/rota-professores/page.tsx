@@ -21,7 +21,7 @@ function selectButton(selectedButton: 'disciplina' | 'professores') {
   }
 }
 
-export default async function Disciplinas() {
+export default async function Professores() {
     const teachers = await getAllProfessores()
   return (
     <div className={styles.element}>
