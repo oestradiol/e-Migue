@@ -26,15 +26,7 @@ export default function Home() {
             />
             </Link>
           </div>
-          <div className={styles.professor}>
-            <Link href ='/user-professor' className={styles.login_button}>
-            <img
-                  className={styles.img}
-                  alt="Entrar como Professor"
-                  src="/botao_professor.png"
-            />
-            </Link>
-          </div>
+          
         </div>
       </div>
     </div>

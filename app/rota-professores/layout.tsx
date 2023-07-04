@@ -60,11 +60,7 @@ export default function RootLayout({
             </Link>  
             </div>
 
-          <img
-            className={styles.icon_voltar}
-            alt="Icon voltar"
-            src="https://generation-sessions.s3.amazonaws.com/947dd278e122fe6a115d674876e525b1/img/icon-voltar.svg"
-          />
+          
     </html>
   )
 }

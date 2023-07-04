@@ -28,9 +28,10 @@ const DisciplinaList: React.FC<MyComponentProps> = ({ disciplinas }) => {
     <div>
       {disciplinas.map((disciplina) => (
         <div className={styles.disciplina_card} key={disciplina.id}>
+          <Link href={`/disciplina/${disciplina.id}`}>
           <div className={styles.disciplina_info}>
             <h3>{disciplina.nome}</h3>
-          </div>
+          </div></Link>
         </div>
       ))}
     </div>

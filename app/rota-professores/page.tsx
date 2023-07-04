@@ -55,10 +55,13 @@ const TeacherList: React.FC<MyComponentProps> = ({ teachers }) => {
   return (
     <div>
       {teachers.map((teacher: any) => (
+        
         <div className={styles.teacher_card} key={teacher.id}>
+          <Link href={`/perfil-professor/${teacher.id}`}>
           <div className={styles.teacher_info}>
             <h3>{teacher.nome}</h3>
           </div>
+          </Link>
           <div className={styles.teacher_rating}>
             {renderStars(teacher.sum_avaliacoes/teacher.qtd_avaliacoes)}
           </div>

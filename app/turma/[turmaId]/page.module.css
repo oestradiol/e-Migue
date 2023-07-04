@@ -197,3 +197,155 @@ margin-right: 5px;
 .teacher_rating div:last-child {
 color: #CCCCCC;
 }
+
+.element {
+  display: flex;
+  height: 100vh;
+  background-color: #141414;
+}
+
+.div {
+  margin: auto 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.tituloContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.professorTitulo {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.disciplinaTitulo {
+  font-size: 20px;
+  margin-top: 10px;
+  color: white;
+}
+
+.avaliacoesContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.avaliacoesList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.avaliacaoItem {
+  background-color: #424242;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.avaliacaoItem h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.avaliacaoItem p {
+  margin: 0;
+}
+
+.element {
+  display: flex;
+  height: 100vh;
+  background-color: #141414;
+}
+
+.div {
+  margin: auto 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.tituloContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.professorTitulo {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.disciplinaTitulo {
+  font-size: 20px;
+  margin-top: 10px;
+  color: white;
+}
+
+.avaliacoesContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.avaliacoesList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.avaliacaoItem {
+  background-color: #424242;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.avaliacaoItem h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.avaliacaoItem p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.teacher_info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-left: auto;
+}
+
+.teacher_info h2 {
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.teacher_rating {
+  display: flex;
+  align-items: center;
+}
+
+.teacher_rating div {
+  color: #FFD700;
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.teacher_rating div:last-child {
+  color: #CCCCCC;
+}
