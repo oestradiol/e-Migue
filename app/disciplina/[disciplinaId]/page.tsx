@@ -21,7 +21,7 @@ export default async function DisciplinaPage({
                     <ul>
                         {professores.map((professor: any) => (
                             <li key={professor.id} className={styles.avaliacaoItem}>
-                             <Link href={`/perfil-professor/${professor.id}`}>  
+                             <Link href={`/turma/${professor.id}`}>  
                             <div className={styles.teacher_info}>
                                 
                                 <h2>{professor.nome} </h2>
